@@ -2,10 +2,12 @@ import { API_BASE_URL } from '../config';
 
 export interface Lead {
     id: number;
+    student_id: number;
     country: string;
     status: string;
     created_at: string;
     student: {
+        id: number;
         name: string;
         whatsapp_id: string;
         email: string;

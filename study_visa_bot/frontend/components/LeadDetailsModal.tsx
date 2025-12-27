@@ -14,7 +14,7 @@ export default function LeadDetailsModal({ lead, onClose }: ModalProps) {
     useEffect(() => {
         if (lead) {
             setLoading(true);
-            fetchLeadHistory(lead.student.id || lead.id) // Fallback if structure varies
+            fetchLeadHistory(lead.student_id)
                 .then(data => setHistory(data))
                 .catch(err => console.error(err))
                 .finally(() => setLoading(false));
@@ -76,8 +76,8 @@ export default function LeadDetailsModal({ lead, onClose }: ModalProps) {
                             history.map((msg, idx) => (
                                 <div key={idx} className={`flex ${msg.sender === "user" ? "justify-start" : "justify-end"}`}>
                                     <div className={`max-w-[70%] p-3 rounded-lg ${msg.sender === "user"
-                                            ? "bg-gray-800 text-gray-200 rounded-tl-none border border-gray-700"
-                                            : "bg-purple-900/30 text-purple-100 rounded-tr-none border border-purple-500/30"
+                                        ? "bg-gray-800 text-gray-200 rounded-tl-none border border-gray-700"
+                                        : "bg-purple-900/30 text-purple-100 rounded-tr-none border border-purple-500/30"
                                         }`}>
                                         <div className="text-[10px] opacity-50 mb-1 uppercase tracking-widest">
                                             {msg.sender === "user" ? "Student" : "AI Agent"} • {new Date(msg.timestamp).toLocaleTimeString()}
