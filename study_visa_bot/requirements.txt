@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+python-dotenv
+google-generativeai
+aiosqlite
+python-multipart
+requests
+httpx
+alembic
+psycopg2-binary
