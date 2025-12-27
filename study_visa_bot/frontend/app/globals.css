@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-neon-cyan: #06b6d4;
+  --color-neon-purple: #8b5cf6;
+}
+
+:root {
+  --background: 10, 10, 12;
+  --foreground: 255, 255, 255;
+  --neon-cyan: 6, 182, 212;
+  --neon-purple: 139, 92, 246;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.glass-panel {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neon-border {
+  box-shadow: 0 0 10px rgba(var(--neon-cyan), 0.2);
+  border: 1px solid rgba(var(--neon-cyan), 0.3);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(var(--neon-cyan), 0.5);
+}
